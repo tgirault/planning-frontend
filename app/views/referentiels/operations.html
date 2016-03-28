@@ -1,0 +1,55 @@
+<div class="page page-form">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<strong><span class="glyphicon glyphicon-th"></span> <span data-i18n="label.operations.add"></span></strong>
+				</div>
+				<div class="panel-body">
+					<form name="form_constraints" class="form-validation" novalidate data-ng-submit="submitForm()">
+						<div class="form-group" data-ng-controller="DatePickerController">
+							<label for="inputDateOperation" data-i18n="label.date"></label>
+							<div class="input-group ui-datepicker">
+								<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+								<input type="text" 
+                                    name="operation.date" 
+                                    class="form-control" 
+                                    data-ng-model="dt" 
+                                    data-i18n-placeholder="label.date.format" 
+                                    data-datepicker-popup="{{format}}" 
+                                    data-datepicker-options="dateOptions" 
+                                    data-is-open="opened" 
+                                    data-ng-required="true" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputLabelOperation" data-i18n="label.label"></label>
+							<input type="text" 
+                                   name="operation.label"
+                                   class="form-control" 
+                                   data-ng-model="operation.label"
+                                   data-i18n-placeholder="label.label"
+                                   data-ng-minlength=2
+                                   data-ng-maxlength=255
+                                   required />
+						</div>
+						<div class="form-group">
+							<label for="inputAmountOperation" data-i18n="label.amount"></label>
+							<div class="input-group">
+								<input type="text" 
+                                       name="operation.amount"
+                                       class="form-control"
+                                       data-ng-model="operation.amount"
+                                       data-i18n-placeholder="label.amount.format"
+                                       data-ng-pattern="/^([0-9]{0,5})([,.][0-9]{1,2})*$/"
+                                       required />
+								<span class="input-group-addon" data-i18n="label.currency"></span>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-success" data-ng-disabled="!canSubmit()" data-i18n="label.add"></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

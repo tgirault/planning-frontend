@@ -1,0 +1,39 @@
+<div class="page page-form">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<strong><span class="glyphicon glyphicon-th"></span> <span data-i18n="label.accounts.add"></span></strong>
+				</div>
+				<div class="panel-body">
+					<form name="form_constraints" class="form-validation" novalidate data-ng-submit="submitForm()">
+						<div class="form-group">
+							<label for="account.email" data-i18n="label.email"></label>
+							<input type="text" 
+                                   name="account.email"
+                                   class="form-control" 
+                                   data-ng-model="account.email"
+                                   data-i18n-placeholder="label.email"
+                                   data-ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+                                   data-ng-minlength=2
+                                   data-ng-maxlength=255
+                                   required />
+						</div>
+						<div class="form-group">
+							<label for="account.password" data-i18n="label.password"></label>
+							<div class="input-group">
+								<input type="password" 
+                                       name="account.password"
+                                       class="form-control"
+                                       data-ng-model="account.password"
+                                       data-i18n-placeholder="label.password"
+                                       required />
+							</div>
+						</div>
+						<button type="submit" class="btn btn-success" data-ng-disabled="!canSubmit()" data-i18n="label.add"></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

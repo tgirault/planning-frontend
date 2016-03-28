@@ -1,0 +1,96 @@
+﻿<header class="clearfix">
+  
+  <!--logo-->
+  <div class="logo">
+    <a href="#/dashboard">
+      <span>
+        {{main.brand}}
+      </span>
+    </a>
+  </div>
+  <!--/logo-->
+  
+  <!--top nav-->
+  <div class="top-nav">
+    <ul class="nav-left list-unstyled">
+      <!--toggle min-->
+      <li>
+        <a href="#/" data-toggle-min-nav class="toggle-min">
+          <i class="fa fa-bars">
+          </i>
+        </a>
+      </li>
+      <!--/toggle min-->
+      
+      <!--profil menu-->
+      <li class="dropdown text-normal nav-profile">
+        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+          <img src="images/profil_picture.jpg" alt="" class="img-circle img30_30">
+          <span class="hidden-xs">
+            <span>
+              Thomas GIRAULT
+            </span>
+          </span>
+        </a>
+        <ul class="dropdown-menu dropdown-dark with-arrow">
+          <li>
+            <a href="#/profile">
+              <i class="fa fa-user">
+              </i>
+              <span data-i18n="label.my.profile">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#/lock-screen">
+              <i class="fa fa-lock">
+              </i>
+              <span data-i18n="label.lock">
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#/signin" data-ng-controller="LogoutController" data-ng-click="logout()">
+              <i class="fa fa-sign-out">
+              </i>
+              <span data-i18n="label.log.out">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--/profil menu-->
+      
+      <!--i18n menu-->
+      <li class="dropdown langs text-normal" data-ng-controller="LanguageController">
+        <a href="javascript:;" class="dropdown-toggle active-flag" data-toggle="dropdown">
+          <div class="flag {{ getFlag() }}">
+          </div>
+        </a>
+        <ul class="dropdown-menu dropdown-dark with-arrow list-langs" role="menu">
+          <li data-ng-show="country !== 'US' ">
+            <a href="javascript:;" data-ng-click="setCountry('US')">
+              <div class="flag flag-US">
+              </div>
+            </a>
+          </li>
+          <li data-ng-show="country !== 'EN' ">
+            <a href="javascript:;" data-ng-click="setCountry('EN')">
+              <div class="flag flag-EN">
+              </div>
+            </a>
+          </li>
+          <li data-ng-show="country !== 'FR' ">
+            <a href="javascript:;" data-ng-click="setCountry('FR')">
+              <div class="flag flag-FR">
+              </div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--/i18n menu-->
+    </ul>
+  </div>
+  <!--/top-nav-->
+  
+</header>
