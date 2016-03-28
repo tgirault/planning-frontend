@@ -1,4 +1,6 @@
 # Build myapp server Docker container
 FROM coreos/apache
 MAINTAINER t.girault@gmail.com
-COPY dest /var/www/
+
+# Copie des sources dans le répertoire www
+COPY app /var/www/
