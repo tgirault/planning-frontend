@@ -20,7 +20,7 @@ var SignupController = function($scope, $location, $http, $httpParamSerializer, 
 		};
 
 		$http({
-			url: "http://localhost:8081/planning-authorization-server/user/register",
+			url: "http://localhost:9091/planning-authorization-server/user/register",
 			method: "POST",
 			accept: "application/json",
 			data: data,
