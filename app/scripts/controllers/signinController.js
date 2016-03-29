@@ -19,7 +19,7 @@ var SigninController = function($scope, $location, $http, $httpParamSerializer, 
 		};
 
 		$http({
-			url: "http://localhost:9091/planning-authorization-server/oauth/token",
+			url: "http://192.168.0.100:9091/planning-authorization-server/oauth/token",
 			method: "POST",
 			accept: "application/json",
 			data: $httpParamSerializer(data),
