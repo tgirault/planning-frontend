@@ -3,4 +3,4 @@ FROM httpd:2.4
 MAINTAINER t.girault@gmail.com
 
 # Copie des sources dans le répertoire apache
-COPY app /usr/local/apache2/src/
+COPY app /usr/local/apache2/htdocs
